@@ -7,8 +7,8 @@
     "build:akamai": "npx @humansecurity/akamai-edgeworker-enforcer",
     "worker:compile": "node esbuild.js",
     "worker:bundle-json": "cd dist && echo '{\"edgeworker-version\":\"'$npm_package_version'\",\"description\":\"'$npm_package_description'\"}' > bundle.json",
-    "worker:tgz": "cp edgekv.js dist && cp edgekv_tokens.js dist && cd dist && tar czvf 'build.tgz' *",
-    "clean": "rm -rf dist && mkdir dist"
+    "worker:tgz": "node scripts/tgz.js",
+    "clean": "node scripts/clean.js"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +20,7 @@
     "@types/akamai-edgeworkers": "^1.1.16",
     "@types/node": "^20.14.2",
     "esbuild": "^0.25.2",
+    "tar": "^7.5.9",
     "tslib": "^2.0.3",
     "typescript": "^5.6.2"
   }
