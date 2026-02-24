@@ -8,7 +8,7 @@
     "worker:compile": "node esbuild.js",
     "worker:bundle-json": "cd dist && echo '{\"edgeworker-version\":\"'$npm_package_version'\",\"description\":\"'$npm_package_description'\"}' > bundle.json",
     "worker:tgz": "node scripts/tgz.js",
-    "clean": "node -e \"const fs=require('fs');fs.rmSync('dist',{recursive:true,force:true});fs.mkdirSync('dist',{recursive:true})\""
+    "clean": "node scripts/clean.js"
   },
   "author": "",
   "license": "ISC",
