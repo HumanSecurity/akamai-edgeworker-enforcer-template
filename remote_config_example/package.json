@@ -4,8 +4,10 @@
   "main": "dist/main.js",
   "scripts": {
     "build:worker": "npm run worker:compile && npm run worker:bundle-json && npm run worker:tgz",
+    "build:worker:dev": "npm run worker:compile:dev && npm run worker:bundle-json && npm run worker:tgz",
     "build:akamai": "npx @humansecurity/akamai-edgeworker-enforcer",
     "worker:compile": "node esbuild.js",
+    "worker:compile:dev": "node esbuild.js --no-minify",
     "worker:bundle-json": "cd dist && echo '{\"edgeworker-version\":\"'$npm_package_version'\",\"description\":\"'$npm_package_description'\"}' > bundle.json",
     "worker:tgz": "node scripts/tgz.js",
     "clean": "node scripts/clean.js"
