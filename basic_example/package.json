@@ -1,6 +1,6 @@
 {
   "name": "akamai-edgeworker-enforcer-template",
-  "version": "1.0.0-test-500",
+  "version": "1.0.0",
   "main": "dist/main.js",
   "scripts": {
     "build:worker": "npm run worker:compile && npm run worker:bundle-json && npm run worker:tgz",
