@@ -11,12 +11,15 @@ const AKAMAI_BUILT_IN_MODULES = [
     'text-encode-transform',
 ];
 
+const shouldMinify = !process.argv.includes('--no-minify');
+
 esbuild.buildSync({
     entryPoints: ['src/main.ts'],
     bundle: true,
+    legalComments: shouldMinify ? 'none' : 'eof',
     external: AKAMAI_BUILT_IN_MODULES,
     outfile: './dist/main.js',
     target: 'es2022',
-    minify: false,
+    minify: shouldMinify,
     format: 'esm',
 });
