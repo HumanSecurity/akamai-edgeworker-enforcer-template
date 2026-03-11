@@ -16,7 +16,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@humansecurity/akamai-edgeworker-enforcer": "4.4.2"
+    "@humansecurity/akamai-edgeworker-enforcer": "4.6.0"
   },
   "devDependencies": {
     "@types/akamai-edgeworkers": "^1.1.16",
